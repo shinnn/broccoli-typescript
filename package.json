@@ -1,0 +1,37 @@
+{
+  "name": "broccoli-typescript",
+  "version": "0.0.0",
+  "description": "TypeScript compiler for Broccoli",
+  "main": "index.js",
+  "scripts": {
+    "test": "broccoli build test/actual && node node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinnn/broccoli-typescript.git"
+  },
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn"
+  },
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shinnn/broccoli-typescript/issues"
+  },
+  "homepage": "https://github.com/shinnn/broccoli-typescript",
+  "keywords": [
+    "broccoli-plugin",
+    "TypeScript",
+    "compiler",
+    "altJS"
+  ],
+  "dependencies": {
+    "broccoli-filter": "^0.1.0",
+    "typestring": "^0.9.5-4"
+  },
+  "devDependencies": {
+    "broccoli": "^0.2.0",
+    "mocha": "^1.17.1"
+  }
+}
