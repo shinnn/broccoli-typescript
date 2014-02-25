@@ -6,7 +6,7 @@
 [![devDependency Status](https://david-dm.org/shinnn/broccoli-typescript/dev-status.png)](https://david-dm.org/shinnn/broccoli-typescript#info=devDependencies)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shinnn/broccoli-typescript/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-[TypeScript](http://typescript.codeplex.com/) formatter for [Broccoli](https://github.com/joliss/broccoli)
+[TypeScript](http://typescript.codeplex.com/) compiler for [Broccoli](https://github.com/joliss/broccoli)
 
 ## Installation
 
