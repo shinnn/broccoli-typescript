@@ -9,7 +9,8 @@ var expected = 'function greeter(person) {\n' +
 
 describe('broccoli-typescript', function () {
   it('should compile TyeScript', function (done) {
-    fs.readFile('test/actual/src.js', function(err, data) {
+    fs.readFile('test/actual/simple.js', function(err, data) {
+			if (err) done(err);
       assert.strictEqual(data.toString(), expected);
       done();
     });

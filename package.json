@@ -4,7 +4,8 @@
   "description": "TypeScript compiler for Broccoli",
   "main": "index.js",
   "scripts": {
-    "test": "broccoli build test/actual && node node_modules/.bin/mocha"
+    "build": "rimraf test/actual && broccoli build test/actual",
+    "test": "npm run-script build && mocha --reporter spec test/test.js"
   },
   "repository": {
     "type": "git",
@@ -22,16 +23,19 @@
   "homepage": "https://github.com/shinnn/broccoli-typescript",
   "keywords": [
     "broccoli-plugin",
-    "TypeScript",
+    "typescript",
+    "language",
     "compiler",
-    "altJS"
+    "transpiler",
+    "altjs"
   ],
   "dependencies": {
     "broccoli-filter": "^0.1.0",
-    "typestring": "^0.9.5-4"
+    "typestring": "^0.9.7"
   },
   "devDependencies": {
-    "broccoli": "^0.2.0",
-    "mocha": "^1.17.1"
+    "broccoli": "^0.2.1",
+    "mocha": "^1.17.1",
+    "rimraf": "^2.2.6"
   }
 }
