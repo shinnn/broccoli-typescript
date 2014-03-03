@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.org/shinnn/broccoli-typescript.png?branch=master)](https://travis-ci.org/shinnn/broccoli-typescript)
 [![Dependency Status](https://david-dm.org/shinnn/broccoli-typescript.png)](https://david-dm.org/shinnn/broccoli-typescript)
 [![devDependency Status](https://david-dm.org/shinnn/broccoli-typescript/dev-status.png)](https://david-dm.org/shinnn/broccoli-typescript#info=devDependencies)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shinnn/broccoli-typescript/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 [TypeScript](http://typescript.codeplex.com/) compiler for [Broccoli](https://github.com/joliss/broccoli)
 
@@ -13,6 +12,21 @@
 ```
 npm i --save broccoli-typescript
 ```
+
+Make sure you have installed [Node](http://nodejs.org/) before running this command.
+
+## Example
+
+```javascript
+var filterTypeScript = require('broccoli-typescript');
+tree = filterTypeScript(tree, options);
+```
+
+## API
+
+### filterTypeScript(tree)
+
+Currently this plugin doesn't support Source Map.
 
 ## License
 
