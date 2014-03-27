@@ -31,11 +31,11 @@
   ],
   "dependencies": {
     "broccoli-filter": "^0.1.4",
-    "typestring": "^0.9.7"
+    "typestring": "^0.9.7-1"
   },
   "devDependencies": {
-    "broccoli": "^0.4.1",
-    "mocha": "^1.18.0",
+    "broccoli": "^0.4.2",
+    "mocha": "^1.18.2",
     "rimraf": "^2.2.6"
   }
 }
