@@ -9,11 +9,11 @@
 
 ## Installation
 
-```
-npm i --save broccoli-typescript
-```
+Install with [npm](https://www.npmjs.org/). (Make sure you have installed [Node](http://nodejs.org/).)
 
-Make sure you have installed [Node](http://nodejs.org/) before running this command.
+```
+npm i --save-dev broccoli-typescript
+```
 
 ## Example
 
