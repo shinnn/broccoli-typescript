@@ -1,9 +1,9 @@
 # broccoli-typescript
 
-[![NPM version](https://badge.fury.io/js/broccoli-typescript.png)](http://badge.fury.io/js/broccoli-typescript)
-[![Build Status](https://travis-ci.org/shinnn/broccoli-typescript.png?branch=master)](https://travis-ci.org/shinnn/broccoli-typescript)
-[![Dependency Status](https://david-dm.org/shinnn/broccoli-typescript.png)](https://david-dm.org/shinnn/broccoli-typescript)
-[![devDependency Status](https://david-dm.org/shinnn/broccoli-typescript/dev-status.png)](https://david-dm.org/shinnn/broccoli-typescript#info=devDependencies)
+[![NPM version](https://badge.fury.io/js/broccoli-typescript.svg)](http://badge.fury.io/js/broccoli-typescript)
+[![Build Status](https://travis-ci.org/shinnn/broccoli-typescript.svg?branch=master)](https://travis-ci.org/shinnn/broccoli-typescript)
+[![Dependency Status](https://david-dm.org/shinnn/broccoli-typescript.svg?theme=shields.io)](https://david-dm.org/shinnn/broccoli-typescript)
+[![devDependency Status](https://david-dm.org/shinnn/broccoli-typescript/dev-status.svg?theme=shields.io)](https://david-dm.org/shinnn/broccoli-typescript#info=devDependencies)
 
 [TypeScript](http://typescript.codeplex.com/) compiler for [Broccoli](https://github.com/joliss/broccoli)
 
