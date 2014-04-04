@@ -36,8 +36,8 @@
     "altjs"
   ],
   "dependencies": {
-    "broccoli-filter": "^0.1.4",
-    "typestring": "^0.9.7-1"
+    "broccoli-filter": "^0.1.5",
+    "typestring": "^1.0.0"
   },
   "devDependencies": {
     "broccoli": "^0.6.0",
