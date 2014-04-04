@@ -1,6 +1,6 @@
 {
   "name": "broccoli-typescript",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "TypeScript compiler for Broccoli",
   "main": "index.js",
   "scripts": {
