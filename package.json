@@ -38,11 +38,11 @@
     "altjs"
   ],
   "dependencies": {
-    "broccoli-filter": "^0.1.5",
+    "broccoli-filter": "^0.1.6",
     "typestring": "^1.0.0"
   },
   "devDependencies": {
-    "broccoli": "^0.6.0",
+    "broccoli": "^0.7.2",
     "mocha": "^1.18.2",
     "rimraf": "^2.2.6",
     "jshint-stylish": "^0.1.5",
