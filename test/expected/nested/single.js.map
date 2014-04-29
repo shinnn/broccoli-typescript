@@ -1,0 +1,1 @@
+{"version":3,"file":"single.js","sourceRoot":"","sources":["../../../test/fixtures/single/function.ts","../../../test/fixtures/single/nested/call.ts"],"names":["showVersion"],"mappings":"AAAA,SAAS,WAAW,CAAC,OAAe;IAChCA,OAAOA,CAACA,GAAGA,CAACA,WAAWA,GAAGA,OAAOA,CAACA;AACtCA,CAACA;ACCD,WAAW,CAAC,CAAC,CAAC,OAAO,CAAC"}

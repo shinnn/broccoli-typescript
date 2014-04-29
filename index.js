@@ -1,25 +1,50 @@
 'use strict';
 
-var Filter = require('broccoli-filter');
-var ts2js = require('typestring').compile;
+var fs = require('fs');
+var path = require('path');
+var Writer = require('broccoli-writer');
+var ts = require('ts-compiler');
+var walkSync = require('walk-sync');
+var objectAssign = require('object-assign');
 
-function TypeScriptFilter(inputTree, options) {
-  if (!(this instanceof TypeScriptFilter)) {
-    return new TypeScriptFilter(inputTree, options);
+function TSCompiler(inputTree, options) {
+  if (!(this instanceof TSCompiler)) {
+    return new TSCompiler(inputTree, options);
   }
   
   this.inputTree = inputTree;
   this.options = options || {};
 }
 
-TypeScriptFilter.prototype = Object.create(Filter.prototype);
-TypeScriptFilter.prototype.constructor = TypeScriptFilter;
+TSCompiler.prototype = Object.create(Writer.prototype);
+TSCompiler.prototype.constructor = TSCompiler;
 
-TypeScriptFilter.prototype.extensions = ['ts'];
-TypeScriptFilter.prototype.targetExtension = 'js';
+TSCompiler.prototype.write = function(readTree, destDir) {
+  var options = objectAssign({outDir: destDir}, this.options);
+  if (this.options.outDir) {
+    options.outDir = path.resolve(destDir, options.outDir);
+  }
+  if (options.out) {
+    options.out = path.resolve(destDir, options.out);
+  }
 
-TypeScriptFilter.prototype.processString = function(str) {
-  return ts2js(str);
+  return readTree(this.inputTree).then(function(srcDir) {
+    var files = walkSync(srcDir)
+    .filter(isTypeScript)
+    .map(function(filepath) {
+      return path.resolve(srcDir, filepath);
+    });
+    
+    if (files.length > 0) {
+      ts.compile(files, options, function(err) {
+        if (err) throw err;
+      });
+    }
+  });
 };
 
-module.exports = TypeScriptFilter;
+function isTypeScript(filepath) {
+  return path.extname(filepath).toLowerCase() === '.ts';
+}
+
+module.exports = TSCompiler;
