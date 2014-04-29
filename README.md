@@ -38,7 +38,7 @@ Type: `String`
 
 Concatenate and write compilation results to a single file. When this option is specified, the `outDir` option is ignored.
 
-***Note:** Both `outDir` option and `out` option are treated as relative paths from build target directory.*
+**Note:** Both `outDir` option and `out` option are treated as relative paths from build target directory.
 
 And besides, [all options](https://github.com/jedmao/ts-compiler#tsicompileroptions) for [ts-compiler](https://github.com/jedmao/ts-compiler) are available.
 
