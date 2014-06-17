@@ -6,4 +6,5 @@ var user = {
     givenName: 'John',
     surname: 'Smith'
 };
+
 console.log(greeter(user));
