@@ -11,7 +11,7 @@ function TSCompiler(inputTree, options) {
   if (!(this instanceof TSCompiler)) {
     return new TSCompiler(inputTree, options);
   }
-  
+
   this.inputTree = inputTree;
   this.options = options || {};
 }
@@ -34,7 +34,7 @@ TSCompiler.prototype.write = function(readTree, destDir) {
     .map(function(filepath) {
       return path.resolve(srcDir, filepath);
     });
-    
+
     if (files.length > 0) {
       ts.compile(files, options, function(err) {
         if (err) throw err;
