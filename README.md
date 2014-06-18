@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/shinnn/broccoli-typescript.svg)](https://david-dm.org/shinnn/broccoli-typescript)
 [![devDependency Status](https://david-dm.org/shinnn/broccoli-typescript/dev-status.svg)](https://david-dm.org/shinnn/broccoli-typescript#info=devDependencies)
 
-[TypeScript](http://typescript.codeplex.com/) compiler for [Broccoli](https://github.com/joliss/broccoli)
+[TypeScript](http://typescript.codeplex.com/) compiler for [Broccoli](https://github.com/broccolijs/broccoli)
 
 ## Installation
 
