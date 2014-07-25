@@ -2,11 +2,11 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var Q = require('q');
+var Bluebird = require('bluebird');
 
-var readFile = Q.denodeify(fs.readFile);
+var readFile = Bluebird.promisify(fs.readFile);
 function compareFiles(filename) {
-  return Q.all([
+  return Bluebird.all([
     readFile('test/actual/' + filename),
     readFile('test/expected/' + filename)
   ]).spread(function(actual, expected) {
@@ -14,17 +14,9 @@ function compareFiles(filename) {
   });
 }
 
-function checkPathExists(filepath) {
-  var defer = Q.defer();
-  fs.exists(filepath, defer.resolve);
-  return defer.promise.then(function(exists) {
-    assert.strictEqual(exists, false);
-  });
-}
-
 describe('broccoli-typescript', function() {
   it('should compile multiple .ts files recursively.', function() {
-    return Q.all([
+    return Bluebird.all([
       compareFiles('interface.js'),
       compareFiles('class.js')
     ]);
@@ -32,13 +24,19 @@ describe('broccoli-typescript', function() {
   it('should compile multiple .ts files into a single .js file.', function() {
     return compareFiles('nested/single.js');
   });
-  it('should ignore "optDir" option when "out" option is specified.', function() {
-    return checkPathExists('test/actual/this');
+  it('should ignore "optDir" option when "out" option is specified.', function(done) {
+    fs.exists('test/actual/this', function(exists) {
+      assert.strictEqual(exists, false);
+      done();
+    });
   });
   it('should create a sourcemap file.', function() {
     return compareFiles('nested/single.js.map');
   });
-  it('should not create an empty directory.', function() {
-    return checkPathExists('test/actual/empty');
+  it('should not create an empty directory.', function(done) {
+    fs.exists('test/actual/empty', function(exists) {
+      assert.strictEqual(exists, false);
+      done();
+    });
   });
 });
