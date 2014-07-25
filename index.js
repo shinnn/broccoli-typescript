@@ -37,7 +37,9 @@ TSCompiler.prototype.write = function(readTree, destDir) {
 
     if (files.length > 0) {
       ts.compile(files, options, function(err) {
-        if (err) throw err;
+        if (err) {
+          throw err;
+        }
       });
     }
   });

@@ -1,7 +1,7 @@
 'use strict';
 
 var mergeTrees = require('broccoli-merge-trees');
-var compileTypeScript = require('./index');
+var compileTypeScript = require('./');
 
 var multipleOut = compileTypeScript('test/fixtures/multiple');
 
