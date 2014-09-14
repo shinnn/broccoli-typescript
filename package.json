@@ -39,9 +39,9 @@
   ],
   "dependencies": {
     "broccoli-writer": "^0.1.1",
-    "object-assign": "^0.3.1",
     "ts-compiler": "^2.0.0",
-    "walk-sync": "^0.1.2"
+    "walk-sync": "^0.1.2",
+    "xtend": "^4.0.0"
   },
   "devDependencies": {
     "bluebird": "^2.2.2",

@@ -5,7 +5,7 @@ var path = require('path');
 var Writer = require('broccoli-writer');
 var ts = require('ts-compiler');
 var walkSync = require('walk-sync');
-var objectAssign = require('object-assign');
+var xtend = require('xtend');
 
 function TSCompiler(inputTree, options) {
   if (!(this instanceof TSCompiler)) {
@@ -20,7 +20,7 @@ TSCompiler.prototype = Object.create(Writer.prototype);
 TSCompiler.prototype.constructor = TSCompiler;
 
 TSCompiler.prototype.write = function(readTree, destDir) {
-  var options = objectAssign({outDir: destDir}, this.options);
+  var options = xtend({outDir: destDir}, this.options);
   if (this.options.outDir) {
     options.outDir = path.resolve(destDir, options.outDir);
   }
