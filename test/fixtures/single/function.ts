@@ -1,3 +1,1 @@
-function showVersion(version: string) {
-    console.log("Version: " + version);
-}
+var majorVersion = (version: string) => version.charAt(0);

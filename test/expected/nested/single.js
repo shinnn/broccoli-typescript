@@ -1,5 +1,5 @@
-function showVersion(version) {
-    console.log("Version: " + version);
-}
-showVersion(_.VERSION);
+var majorVersion = function (version) {
+    return version.charAt(0);
+};
+majorVersion(_.VERSION);
 //# sourceMappingURL=single.js.map
