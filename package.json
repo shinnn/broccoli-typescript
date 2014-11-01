@@ -21,7 +21,6 @@
     "name": "Shinnosuke Watanabe",
     "url": "https://github.com/shinnn"
   },
-  "readmeFilename": "README.md",
   "licenses": [
     {
       "type": "MIT",
@@ -34,7 +33,9 @@
   "homepage": "https://github.com/shinnn/broccoli-typescript",
   "keywords": [
     "broccoli-plugin",
+    "type",
     "typescript",
+    "ts",
     "tsc",
     "language",
     "compiler",
@@ -44,16 +45,16 @@
   "dependencies": {
     "broccoli-writer": "^0.1.1",
     "ts-compiler": "^2.0.0",
-    "walk-sync": "^0.1.2",
+    "walk-sync": "^0.1.3",
     "xtend": "^4.0.0"
   },
   "devDependencies": {
-    "bluebird": "^2.2.2",
-    "broccoli": "^0.12.3",
-    "broccoli-merge-trees": "^0.1.4",
+    "broccoli": "^0.13.2",
+    "broccoli-merge-trees": "^0.2.1",
     "jshint": "^2.5.1",
-    "jshint-stylish": "^0.4.0",
-    "mocha": "^1.21.0",
+    "jshint-stylish": "^1.0.0",
+    "mocha": "^2.0.1",
+    "read-files-promise": "^1.0.1",
     "rimraf": "^2.2.8"
   }
 }
