@@ -2,24 +2,24 @@
 
 var assert = require('assert');
 var fs = require('fs');
-var Bluebird = require('bluebird');
 
-var readFile = Bluebird.promisify(fs.readFile);
+var readFiles = require('read-files-promise');
+
 function compareFiles(filename) {
-  return Bluebird.all([
-    readFile('test/actual/' + filename),
-    readFile('test/expected/' + filename)
-  ]).spread(function(actual, expected) {
-    assert.strictEqual(actual.toString(), expected.toString());
+  return readFiles([
+    'test/actual/' + filename,
+    'test/expected/' + filename
+  ], {encoding: 'utf-8'}).then(function(bufs) {
+    assert.strictEqual(bufs[0], bufs[1]);
   });
 }
 
 describe('broccoli-typescript', function() {
+  it('should compile TypeScript to JavaScript.', function() {
+    return compareFiles('class.js');
+  });
   it('should compile multiple .ts files recursively.', function() {
-    return Bluebird.all([
-      compareFiles('interface.js'),
-      compareFiles('class.js')
-    ]);
+    return compareFiles('interface.js');
   });
   it('should compile multiple .ts files into a single .js file.', function() {
     return compareFiles('nested/single.js');
