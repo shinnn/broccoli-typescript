@@ -1,36 +1,38 @@
 # broccoli-typescript
 
-[![NPM version](https://badge.fury.io/js/broccoli-typescript.svg)](https://www.npmjs.org/package/broccoli-typescript)
-[![Build Status](https://travis-ci.org/shinnn/broccoli-typescript.svg?branch=master)](https://travis-ci.org/shinnn/broccoli-typescript)
-[![Dependency Status](https://david-dm.org/shinnn/broccoli-typescript.svg)](https://david-dm.org/shinnn/broccoli-typescript)
-[![devDependency Status](https://david-dm.org/shinnn/broccoli-typescript/dev-status.svg)](https://david-dm.org/shinnn/broccoli-typescript#info=devDependencies)
+[![npm version](https://badge.fury.io/js/broccoli-typescript.svg)](https://www.npmjs.org/package/broccoli-typescript)
+[![Build Status](https://travis-ci.com/shinnn/broccoli-typescript.svg?branch=master)](https://travis-ci.com/shinnn/broccoli-typescript)
 
-[TypeScript](https://github.com/Microsoft/TypeScript) compiler for [Broccoli](https://github.com/broccolijs/broccoli)
+A [Broccoli](https://github.com/broccolijs/broccoli) pluin to compile [TypeScript](https://github.com/Microsoft/TypeScript)
 
 ## Installation
 
-Install with [npm](https://www.npmjs.org/). (Make sure you have installed [Node](http://nodejs.org/).)
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
-npm i --save-dev broccoli-typescript
+npm install --save-dev broccoli-typescript
 ```
 
 ## Example
 
 ```javascript
-var compileTypeScript = require('broccoli-typescript');
-tree = compileTypeScript(tree, options);
+const broccoliTypeScript = require('broccoli-typescript');
+compileTypeScript(tree, options);
 ```
 
 ## API
 
-### compileTypeScript(tree[, options])
+```javascript
+const broccoliTypeScript = require('broccoli-typescript');
+```
+
+### broccoliTypeScript(tree[, options])
 
 #### options.outDir
 
 Type: `String` Default: Build target directory
 
-Output compiled files to the directory. 
+Output compiled files to the directory.
 
 #### options.out
 
@@ -44,6 +46,4 @@ And besides, [all options](https://github.com/jedmao/ts-compiler#tsicompileropti
 
 ## License
 
-Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
-
-Licensed under [the MIT License](./LICENSE).
+[ISC License](./LICENSE) © 2018 Shinnosuke Watanabe
